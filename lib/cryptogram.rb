@@ -1,5 +1,6 @@
-require "cryptogram/version"
+require 'cryptogram/version'
+require 'cryptogram/ciphers/caesar'
 
 module Cryptogram
-  # Your code goes here...
+  ALPHABET = Array('a'..'z').freeze
 end
