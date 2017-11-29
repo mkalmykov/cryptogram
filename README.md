@@ -1,7 +1,16 @@
 # Cryptogram
 
-[![Build Status](https://travis-ci.org/mkalmykov/cryptogram.svg?branch=master)](https://travis-ci.org/mkalmykov/cryptogram)
 [![Gem Version](https://badge.fury.io/rb/cryptogram.svg)](https://badge.fury.io/rb/cryptogram)
+
+## Builds
+
+Master:
+
+[![Build Status](https://travis-ci.org/mkalmykov/cryptogram.svg?branch=master)](https://travis-ci.org/mkalmykov/cryptogram)
+
+Develop:
+
+[![Build Status](https://travis-ci.org/mkalmykov/cryptogram.svg?branch=develop)](https://travis-ci.org/mkalmykov/cryptogram)
 
 Cryptogram in intended to combine various ciphers in one library.
 
@@ -23,9 +32,26 @@ Or install it yourself as:
 
     $ gem install cryptogram
 
+## Implemented ciphers
+
+* [Caesar cipher](https://en.wikipedia.org/wiki/Caesar_cipher)
+
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'cryptogram'
+
+alphabet = Array('a'..'z')
+shift = 3
+
+encryptor = Cryptogram::Ciphers::Caesar.new(alphabet: alphabet, shift: shift)
+
+encryptor.encrypt('Pack my box with five dozen liquor jugs')
+ # => "Sdfn pb era zlwk ilyh grchq oltxru mxjv
+
+encryptor.decrypt('Sdfn pb era zlwk ilyh grchq oltxru mxjv')
+ # => "Pack my box with five dozen liquor jugs"
+```
 
 ## Development
 
