@@ -1,7 +1,16 @@
 # Cryptogram
 
-[![Build Status](https://travis-ci.org/mkalmykov/cryptogram.svg?branch=master)](https://travis-ci.org/mkalmykov/cryptogram)
 [![Gem Version](https://badge.fury.io/rb/cryptogram.svg)](https://badge.fury.io/rb/cryptogram)
+
+## Builds
+
+Master:
+
+[![Build Status](https://travis-ci.org/mkalmykov/cryptogram.svg?branch=master)](https://travis-ci.org/mkalmykov/cryptogram)
+
+Develop:
+
+[![Build Status](https://travis-ci.org/mkalmykov/cryptogram.svg?branch=develop)](https://travis-ci.org/mkalmykov/cryptogram)
 
 Cryptogram in intended to combine various ciphers in one library.
 
