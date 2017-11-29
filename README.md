@@ -23,9 +23,26 @@ Or install it yourself as:
 
     $ gem install cryptogram
 
+## Implemented ciphers
+
+* [Caesar cipher](https://en.wikipedia.org/wiki/Caesar_cipher)
+
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'cryptogram'
+
+alphabet = Array('a'..'z')
+shift = 3
+
+encryptor = Cryptogram::Ciphers::Caesar.new(alphabet: alphabet, shift: shift)
+
+encryptor.encrypt('Pack my box with five dozen liquor jugs')
+ # => "Sdfn pb era zlwk ilyh grchq oltxru mxjv
+
+encryptor.decrypt('Sdfn pb era zlwk ilyh grchq oltxru mxjv')
+ # => "Pack my box with five dozen liquor jugs"
+```
 
 ## Development
 
