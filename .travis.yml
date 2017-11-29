@@ -11,4 +11,4 @@ before_install:
 install:
   - bundle
 script:
-  - bundle exec rspec
+  - rubocop && bundle exec rspec
