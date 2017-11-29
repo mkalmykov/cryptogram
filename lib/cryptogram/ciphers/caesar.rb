@@ -27,6 +27,8 @@ module Cryptogram
       end
 
       def process(string, &block)
+        raise ArgumentError unless block_given?
+
         string.chars.map(&block).join
       end
     end
