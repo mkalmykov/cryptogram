@@ -2,9 +2,7 @@
 
 [![Build Status](https://travis-ci.org/mkalmykov/cryptogram.svg?branch=master)](https://travis-ci.org/mkalmykov/cryptogram)
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/cryptogram`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Cryptogram in intended to combine various ciphers in one library.
 
 ## Installation
 
@@ -14,9 +12,11 @@ Add this line to your application's Gemfile:
 gem 'cryptogram'
 ```
 
-And then execute:
+Or use the `master` branch if you would like to have the latest updates:
 
-    $ bundle
+```ruby
+gem 'cryptogram', github: 'mkalmykov/cryptogram'
+```
 
 Or install it yourself as:
 
@@ -34,7 +34,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/cryptogram.
+Bug reports and pull requests are welcome on GitHub at https://github.com/mkalmykov/cryptogram.
 
 ## License
 

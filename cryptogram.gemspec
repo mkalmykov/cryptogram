@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Maksim Kalmykov']
   spec.email         = ['m.n.kalmykov@gmail.com']
 
-  spec.summary       = 'Encrypt and decrypt strings with different ciphers.'
+  spec.summary       = 'Encrypt and decrypt strings with ease.'
   spec.homepage      = 'https://github.com/mkalmykov/cryptogram'
   spec.license       = 'MIT'
 
