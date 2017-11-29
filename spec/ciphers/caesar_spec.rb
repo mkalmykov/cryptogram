@@ -2,7 +2,7 @@ require 'spec_helper'
 
 RSpec.describe Cryptogram::Ciphers::Caesar do
   let(:encriptor) { described_class.new(alphabet: alphabet, shift: shift) }
-  let(:phrase) { 'pack my box with five dozen liquor jugs' }
+  let(:phrase) { 'Pack my box with five dozen liquor jugs' }
   let(:alphabet) { Array('a'..'z') }
 
   shared_context 'with alphabetical chars' do
@@ -19,14 +19,14 @@ RSpec.describe Cryptogram::Ciphers::Caesar do
 
   context 'when shift is less than alphabet length' do
     let(:shift) { alphabet.length - 1 }
-    let(:expected_cryptogram) { 'ozbj lx anw vhsg ehud cnydm khptnq itfr' }
+    let(:expected_cryptogram) { 'Ozbj lx anw vhsg ehud cnydm khptnq itfr' }
 
     include_context 'with alphabetical chars'
   end
 
   context 'when shift is greater than alphabet length' do
     let(:shift) { alphabet.length + 1 }
-    let(:expected_cryptogram) { 'qbdl nz cpy xjui gjwf epafo mjrvps kvht' }
+    let(:expected_cryptogram) { 'Qbdl nz cpy xjui gjwf epafo mjrvps kvht' }
 
     include_context 'with alphabetical chars'
   end
