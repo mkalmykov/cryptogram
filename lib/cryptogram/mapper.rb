@@ -3,16 +3,16 @@ module Cryptogram
     def initialize(alphabet:, shift:)
       @shift = shift
 
-      @shifted_mapper = build_mapper(alphabet)
-      @shifted_swapcased_mapper = build_mapper(alphabet.join.swapcase.chars)
+      @mapper = build_mapper(alphabet)
+      @swapcased_mapper = build_mapper(alphabet.join.swapcase.chars)
     end
 
     def map_by_key(char)
-      shifted_mapper.dig(char) || shifted_swapcased_mapper.dig(char) || char
+      mapper.dig(char) || swapcased_mapper.dig(char) || char
     end
 
     def map_by_value(char)
-      shifted_mapper.key(char) || shifted_swapcased_mapper.key(char) || char
+      mapper.key(char) || swapcased_mapper.key(char) || char
     end
 
     private
@@ -23,6 +23,6 @@ module Cryptogram
       Hash[alphabet.zip(shifted_alphabet)]
     end
 
-    attr_reader :shift, :shifted_mapper, :shifted_swapcased_mapper
+    attr_reader :shift, :mapper, :swapcased_mapper
   end
 end
