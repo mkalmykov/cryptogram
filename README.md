@@ -63,6 +63,12 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/mkalmykov/cryptogram.
 
+To contribute:
+
+1. Fork it.
+2. `git checkout -b feature/my_awesome_feature develop`
+3. Create a pull request into develop.
+
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
