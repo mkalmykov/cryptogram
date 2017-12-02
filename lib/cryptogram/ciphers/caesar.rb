@@ -8,11 +8,11 @@ module Cryptogram
       end
 
       def encrypt(string)
-        process(string) { |char| mapper.map_by_key(char) }
+        process(string) { |char| mapper.map_to_shifted(char) }
       end
 
       def decrypt(string)
-        process(string) { |char| mapper.map_by_value(char) }
+        process(string) { |char| mapper.map_to_initial(char) }
       end
 
       private

@@ -7,11 +7,11 @@ module Cryptogram
       @swapcased_mapper = build_mapper(alphabet.join.swapcase.chars)
     end
 
-    def map_by_key(char)
+    def map_to_shifted(char)
       mapper.dig(char) || swapcased_mapper.dig(char) || char
     end
 
-    def map_by_value(char)
+    def map_to_initial(char)
       mapper.key(char) || swapcased_mapper.key(char) || char
     end
 
