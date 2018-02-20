@@ -8,13 +8,14 @@ RSpec.describe Cryptogram::Ciphers::Caesar do
 
   shared_context 'with alphabetical chars' do
     let(:encrypted_phrase) { encriptor.encrypt(phrase) }
+    let(:decrypted_phrase) { encriptor.decrypt(encrypted_phrase) }
 
     it 'can encrypt' do
       expect(encrypted_phrase).to eq expected_cryptogram
     end
 
     it 'can decrypt' do
-      expect(encriptor.decrypt(encrypted_phrase)).to eq phrase
+      expect(decrypted_phrase).to eq phrase
     end
   end
 
