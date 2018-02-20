@@ -1,8 +1,9 @@
+require 'cryptogram/ciphers/base_cipher'
 require 'cryptogram/mapper'
 
 module Cryptogram
   module Ciphers
-    class Caesar
+    class Caesar < BaseCipher
       def initialize(alphabet:, shift:)
         @mapper = ::Cryptogram::Mapper.new(alphabet: alphabet, shift: shift)
       end
