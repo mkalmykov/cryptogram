@@ -8,21 +8,19 @@ module Cryptogram
     end
 
     def map_to_shifted(char)
-      mapper.dig(char) || swapcased_mapper.dig(char) || char
+      @mapper.dig(char) || @swapcased_mapper.dig(char) || char
     end
 
     def map_to_initial(char)
-      mapper.key(char) || swapcased_mapper.key(char) || char
+      @mapper.key(char) || @swapcased_mapper.key(char) || char
     end
 
     private
 
     def build_mapper(alphabet)
-      shifted_alphabet = alphabet.rotate(shift)
+      shifted_alphabet = alphabet.rotate(@shift)
 
       Hash[alphabet.zip(shifted_alphabet)]
     end
-
-    attr_reader :shift, :mapper, :swapcased_mapper
   end
 end
