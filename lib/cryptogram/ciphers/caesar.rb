@@ -4,8 +4,13 @@ require 'cryptogram/mapper'
 module Cryptogram
   module Ciphers
     class Caesar < BaseCipher
+      #
+      # @param [Array, Symbol] alphabet Array of chars or presetted alphabet name
+      # @param [Integer] shift Encryption shift
       def initialize(alphabet:, shift:)
-        @mapper = ::Cryptogram::Mapper.new(alphabet: alphabet, shift: shift)
+        super(alphabet: alphabet)
+
+        @mapper = ::Cryptogram::Mapper.new(alphabet: @alphabet, shift: shift)
       end
 
       def encrypt(string)
